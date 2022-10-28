@@ -1,0 +1,33 @@
+Notes
+-----
+
+- Followed the microsft naming convention :
+https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+
+- Tried to follow the SOLID design pattern.
+
+- Disabled all collisions matrices in project settings > Phisics/Physic 2D (useless in the test).
+
+- Choose IL2CPP as scripting backend in project settings > Player > configuration 
+For more performance and platform compatibilty (building on Unity can be slightly slower if very huge project).
+
+- Installed TextMeshPro essential and replaced the button text with it.
+
+- Capped the width/height of the grid to fit in the camera but can go further.
+
+- Added a GameManager script for logic, security and scalability purpose.
+
+- Used namespaces for logic, scalability and future scripting compilation performances (assemblies)
+
+- Used an interface for all grids level design elemeent to avoid scripting error and facilitate the implementation
+of future element (traps for exemple).
+
+Possibles optimisations and more
+--------------------------------
+
+- Switch the project to URP scriptable pipeline (Unity future standard + more graphics options).
+- Change quality options.
+- Use atlas if there's more sprites for performance.
+- If we consider only the technical test, doing generation often with a lot of tiles could required object pooling for performance ?
+- Doing an UI manager and disable the generate button during generation (pretty useless in the technical test).
+- Calculate obstacles patern placement to avoid stuck future player
