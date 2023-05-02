@@ -11,7 +11,7 @@ namespace DropRateStudio.TechTest.GridGeneration
 		/// </summary>
 		public Sprite Sprite
 		{
-			get => SpriteRenderer?.sprite;
+			get => SpriteRenderer != null ? SpriteRenderer.sprite : null;
 
 			set
 			{
@@ -27,7 +27,7 @@ namespace DropRateStudio.TechTest.GridGeneration
 		/// </summary>
 		public int OrderInLayer
 		{
-			get => (int)(SpriteRenderer?.sortingOrder);
+			get => SpriteRenderer != null ? SpriteRenderer.sortingOrder : 0;
 			set
 			{
 				if (SpriteRenderer != null)

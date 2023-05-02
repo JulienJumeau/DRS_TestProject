@@ -15,7 +15,7 @@ namespace DropRateStudio.TechTest.Extension
 		/// <returns>List of unique random numbers between min/max range </returns>
 		public static List<int> GetUniqueRandomNumbersList(int minRange, int maxRange, int randCount)
 		{
-			List<int> randomNumbersList = new List<int>();
+			List<int> randomNumbersList = new();
 
 			do
 			{
@@ -30,5 +30,17 @@ namespace DropRateStudio.TechTest.Extension
 
 			return randomNumbersList;
 		}
-	}
+
+		/// <summary>
+		/// Call this method to destroy all children from a GameObject
+		/// </summary>
+		/// <param name="parentTransform">The transform component of the parent GameObject</param>
+		public static void DestroyAllChildren(Transform parentTransform)
+        {
+            foreach (Transform child in parentTransform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+        }
+    }
 }
